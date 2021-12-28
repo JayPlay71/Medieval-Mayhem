@@ -7,7 +7,7 @@ function Player2:init(player2)
         self.health = 200
         self.attack = 1
         self.defense = 1.5
-        self.sprite = love.graphics.newImage('sexy singh.png')
+        self.sprite = love.graphics.newImage('p1knight.png')
     elseif player2 == 2 then
         self.health = 100
         self.attack = 2.2
@@ -17,7 +17,7 @@ function Player2:init(player2)
         self.health = 100
         self.attack = 1
         self.defense = 0.75
-        self.sprite = love.graphics.newImage('sexy singh.png')
+        self.sprite = love.graphics.newImage('p2witch.png')
     elseif player2 == 4 then
         self.health = 75
         self.attack = 1.13

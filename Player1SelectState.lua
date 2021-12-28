@@ -1,9 +1,6 @@
 Player1SelectState = Class{__includes = BaseState}
 
-
-require "Player1"
-
-local SPRITES = {love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('p1golem.png'), love.graphics.newImage('p1wizard.png'), love.graphics.newImage('p1vampire.png'), love.graphics.newImage('p1priest.png')}
+local SPRITES = {love.graphics.newImage('p1knight.png'), love.graphics.newImage('p1ninja.png'), love.graphics.newImage('p1witch.png'), love.graphics.newImage('p1golem.png'), love.graphics.newImage('p1wizard.png'), love.graphics.newImage('p1vampire.png'), love.graphics.newImage('p1priest.png')}
 
 function Player1SelectState:init()
     self.currentChar = 1
@@ -11,23 +8,15 @@ end
 
 function Player1SelectState:update(dt)
     if love.keyboard.wasPressed('left') then
-        -- if self.currentChar == 1 then
-            --gSounds['no-select']:play()
-        -- else
-            --gSounds['select']:play()
-            -- self.currentChar = self.currentChar - 1
-        -- end
-        if not(self.currentChar == 1) then
+        if self.currentChar == 1 then
+            self.currentChar = 7
+        else
             self.currentChar = self.currentChar - 1
         end
     elseif love.keyboard.wasPressed('right') then
-        -- if self.currentchar == 7 then
-            --gSounds['no-select']:play()
-        -- else
-            --gSounds['select']:play()
-            --self.currentChar = self.currentChar + 1
-        -- end
-        if not(self.currentChar == 7) then
+        if self.currentchar == 7 then
+            self.currentChar = 1
+        else
             self.currentChar = self.currentChar + 1
         end
     end
