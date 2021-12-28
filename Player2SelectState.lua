@@ -2,8 +2,8 @@ Player2SelectState = Class{__includes = BaseState}
 
 local SPRITES = {love.graphics.newImage('p2knight.png'), love.graphics.newImage('p2ninja.png'), love.graphics.newImage('p2witch.png'), love.graphics.newImage('p2golem.png'), love.graphics.newImage('p2wizard.png'), love.graphics.newImage('p2vampire.png'), love.graphics.newImage('p2priest.png')}
 
-function Player2SelectState:init(p1class)
-    self.player1 = p1class
+function Player2SelectState:init(params)
+    self.player1 = params.player1class
     self.currentChar = 1
 end
 
@@ -23,7 +23,10 @@ function Player2SelectState:update(dt)
     end
 
     if love.keyboard.wasPressed('enter') or love.keyboard.wasPressed('return') then
-        gStateMachine:change('play', p1class, self.currentChar)
+        gStateMachine:change('play', {
+            player1class = self.player1,
+            player2class = self.currentChar
+        })
     end
 
     if love.keyboard.wasPressed('escape') then

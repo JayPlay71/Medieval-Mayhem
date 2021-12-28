@@ -22,7 +22,9 @@ function Player1SelectState:update(dt)
     end
 
     if love.keyboard.wasPressed('enter') or love.keyboard.wasPressed('return') then
-        gStateMachine:change('player2 select', self.currentChar)
+        gStateMachine:change('player2 select', {
+            player1class = self.currentChar
+        })
     end
 
     if love.keyboard.wasPressed('escape') then

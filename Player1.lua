@@ -33,7 +33,7 @@ function Player1:init(player1)
         self.attack = 1.2
         self.defense = 0.9
         self.sprite = love.graphics.newImage('p1vampire.png')
-    else
+    elseif player1 == 7 then
         self.health = 100
         self.attack = 1
         self.defense = 1
