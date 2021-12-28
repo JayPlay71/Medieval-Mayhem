@@ -10,8 +10,8 @@ require "BaseState"
 require "TitleScreenState"
 require "Player1SelectState"
 require "Player2SelectState"
--- require "PlayState"
--- require "GameOverState"
+require "PlayState"
+require "GameOverState"
 
 player1 = Player1()
 player2 = Player2()
@@ -34,8 +34,8 @@ function love.load()
         ['title'] = function() return TitleScreenState() end,
         ['player1 select'] = function() return Player1SelectState() end,
         ['player2 select'] = function() return Player2SelectState() end,
-        --['play'] = function() return PlayState() end,
-        --['game over'] = function() return GameOver() end
+        ['play'] = function() return PlayState() end,
+        ['game over'] = function() return GameOverState() end
         }
     gStateMachine:change('title')
 
@@ -82,8 +82,5 @@ function love.draw()
 
     gStateMachine:render()
 
-    -- love.graphics.draw(bg, 0, 0)
-    -- player1:render()
-    -- player2:render()
     push:apply('end')
 end

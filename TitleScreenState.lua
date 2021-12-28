@@ -11,6 +11,8 @@ function TitleScreenState:update(dt)
 end
 
 function TitleScreenState:render()
+    love.graphics.draw(love.graphics.newImage('background.png'), 0, 0)
+
     love.graphics.setFont(love.graphics.newFont('font.ttf', 32))
     love.graphics.printf('Medieval Mayhem', 0, 64, 400, 'center')
 
