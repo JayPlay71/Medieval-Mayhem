@@ -1,5 +1,6 @@
 Player1SelectState = Class{__includes = BaseState}
 
+
 require "Player1"
 
 local SPRITES = {love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png'), love.graphics.newImage('sexy singh.png')}
